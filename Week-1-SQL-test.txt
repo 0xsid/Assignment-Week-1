@@ -9,8 +9,8 @@
         30
 
 
- select count(empno) AS NumOfEmployeeWithNoCommision from employee where comm is NULL;
+  select count(empno) AS NumOfEmployeeWithNoCommision from employee where comm is NULL OR comm=0;
 
 NUMOFEMPLOYEEWITHNOCOMMISION
 ----------------------------
-                          10
+                          11
