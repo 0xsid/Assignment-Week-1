@@ -1,16 +1,3 @@
  select * from employee where TO_CHAR(hiredate,'MON')='FEB' AND TO_CHAR(hiredate,'YY')='81' AND comm>400;
 
-  EMPNO ENAME                                              JOB                                        HIREDATE  MGR
-                                                     SAL       COMM
----------- -------------------------------------------------- -------------------------------------------------- --------- -------------------------------------------------- ---------- ----------
-    DEPTNO
-----------
-      7521 ward                                               salesman                                   22-FEB-81 7698                                                     1250        500
-        30
-
-
- select count(empno) AS NumOfEmployeeWithNoCommision from employee where comm is NULL;
-
-NUMOFEMPLOYEEWITHNOCOMMISION
-----------------------------
-                          10
+ select count(empno) AS NumOfEmployeeWithNoCommision from employee where comm is NULL OR comm=0;
